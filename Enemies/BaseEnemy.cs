@@ -9,10 +9,9 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     [SerializeField] protected float damage;
 
     [SerializeField] private GameObject damagePopUp;
-
     [SerializeField] private int droppedExperience;
-    
     [SerializeField] private bool shouldDie = false;
+    
     protected bool DeathFlag { get; private set; } = false;
 
     private EnemySpawner _myEnemySpawner;
