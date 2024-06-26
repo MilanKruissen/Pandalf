@@ -51,8 +51,5 @@ public class HoneyArea : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-    
-        // Destroy the object
-        // Destroy(gameObject);
     }
 }
