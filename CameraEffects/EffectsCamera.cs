@@ -27,6 +27,7 @@ public class EffectsCamera : MonoBehaviour
         // Subtle camera movement
         float xMovement = Mathf.Sin(Time.time * movementSpeed) * movementMagnitude;
         float yMovement = Mathf.Cos(Time.time * movementSpeed) * movementMagnitude;
+        
         transform.position = initialPosition + new Vector3(xMovement, yMovement, 0);
     }
 
