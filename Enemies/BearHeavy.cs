@@ -28,7 +28,6 @@ public class BearHeavy : BaseEnemy
 
         anim.SetFloat("Speed", bearHeavyAgent.velocity.magnitude);
 
-        // Check if the enemy died
         if (DeathFlag)
             return;
 
