@@ -54,12 +54,14 @@ public class BaseEnemy : MonoBehaviour, IDamageable
     {
         isTakingPeriodicDamage = true;
         float elapsedTime = 0f;
+        
         while (elapsedTime < duration && _health > 0)
         {
             TakeDamage(damageAmount);
             yield return new WaitForSeconds(interval);
             elapsedTime += interval;
         }
+        
         isTakingPeriodicDamage = false;
     }
 
