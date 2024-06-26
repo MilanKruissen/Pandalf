@@ -38,8 +38,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("WTFFFF Bro");
-        
         if (parentLayoutGroup != null)
         {
             parentLayoutGroup.enabled = false;
