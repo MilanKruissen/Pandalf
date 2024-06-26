@@ -22,8 +22,7 @@ public class TrainingDummy : MonoBehaviour, IDamageable
     {
         SoundManager.PlaySound(SoundManager.Sounds.HitSound, 0.12f);
 
-        DamageIndicator indicator = Instantiate(damagePopUp, transform.position, Quaternion.identity)
-            .GetComponent<DamageIndicator>();
+        DamageIndicator indicator = Instantiate(damagePopUp, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
         indicator.SetDamageText(damageAmount);
 
         StartCoroutine(Wiggle());
@@ -36,9 +35,11 @@ public class TrainingDummy : MonoBehaviour, IDamageable
         while (elapsedTime < duration)
         {
             TakeDamage(damageAmount);
+            
             yield return new WaitForSeconds(interval);
             elapsedTime += interval;
         }
+        
         isTakingPeriodicDamage = false;
     }
 
@@ -53,6 +54,7 @@ public class TrainingDummy : MonoBehaviour, IDamageable
     private IEnumerator Wiggle()
     {
         float elapsedTime = 0f;
+        
         while (elapsedTime < wiggleDuration)
         {
             elapsedTime += Time.deltaTime;
